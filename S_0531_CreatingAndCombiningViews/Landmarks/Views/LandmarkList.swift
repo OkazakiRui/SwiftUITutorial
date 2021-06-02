@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
+        NavigationView {
 //        List {
 //            ForEach(0 ..< landmarks.count) {(row:Int) in
 //                LandmarkRow(landmark: landmarks[row])
@@ -18,8 +19,12 @@ struct LandmarkList: View {
 //        List(landmarks, id: \.id) { landmark in
 //            LandmarkRow(landmark: landmark)
 //        }
-        List(landmarks) { landmark in
-            LandmarkRow(landmark: landmark)
+            List(landmarks) { landmark in
+                NavigationLink( destination: LandmarkDetail() ){
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+        .navigationTitle("Landmarks")
         }
     }
 }
