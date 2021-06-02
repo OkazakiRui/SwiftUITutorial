@@ -30,9 +30,7 @@ struct ContentView: View {
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-                
                 Divider()
-                
                 Text("About Turtle Rock")
                     .font(.title2)
                 Text("Descriptive text goes here.")
