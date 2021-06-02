@@ -10,9 +10,16 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        List {
-            LandmarkRow(landmark: landmarks[0])
-            LandmarkRow(landmark: landmarks[1])
+//        List {
+//            ForEach(0 ..< landmarks.count) {(row:Int) in
+//                LandmarkRow(landmark: landmarks[row])
+//            }
+//        }
+//        List(landmarks, id: \.id) { landmark in
+//            LandmarkRow(landmark: landmark)
+//        }
+        List(landmarks) { landmark in
+            LandmarkRow(landmark: landmark)
         }
     }
 }
