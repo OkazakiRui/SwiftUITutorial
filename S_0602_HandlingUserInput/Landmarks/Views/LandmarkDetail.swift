@@ -49,9 +49,6 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
-            LandmarkDetail(landmark: landmarks[0])
-                    .previewDevice(PreviewDevice(rawValue: deviceName))
-        }
+        LandmarkDetail(landmark: ModelData().landmarks[0])
     }
 }
